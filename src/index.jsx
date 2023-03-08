@@ -4,16 +4,21 @@ import './index.css';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import HomeAssociate from './Associate/Home';
-import HomePartner from './Partner/Home';
+import HomeAssociateSearch from './Associate/AssociateSearch/Home';
+import HomeAssociateRegister from './Associate/AssociateRegister/Home';
+import HomePartnerRegister from './Startap/PartnerRegister/Home';
+import HomePartnerSearch from './Startap/PartnerSearch/Home';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/associate" element={<HomeAssociate />} />
-        <Route path="/partner" element={<HomePartner />} />
+        <Route path="/associate/search" element={<HomeAssociateSearch />} />
+        <Route path="/associate/register" element={<HomeAssociateRegister />} />
+
+        <Route path="/partner/search" element={<HomePartnerSearch />} />
+        <Route path="/partner/register" element={<HomePartnerRegister />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
