@@ -7,6 +7,20 @@ import BasicCard from './components/card';
 export const ContextCard = createContext();
 
 const Content = () => {
+  const optionsCultura = {
+    soja: 'soja',
+    milho: 'milho',
+    cana: 'cana',
+    cafe: 'cafe',
+    florestal: 'florestal',
+    citrus: 'citrus',
+    pecuariaDeCorte: 'pecuaria de corte',
+    pecuariaDeLeite: 'pecuaria de leite',
+    outrasProteínas: 'outras proteínas',
+    outrasCulturas: 'outras culturas',
+    outrosSegmentos: 'outros segmentos',
+  };
+
   const infoCard = {
     title: 'Procurando um novo desafio?',
     content: 'Ou ideias desafiadoras para solucionar?',
@@ -32,6 +46,12 @@ const Content = () => {
     setStage2(true);
   };
 
+  const [newTextArea, setNewTextArea] = useState(false);
+
+  const handleTextAreaClick = () => {
+    setNewTextArea(true);
+  };
+
   return (
     <ContextCard.Provider
       value={{
@@ -40,6 +60,9 @@ const Content = () => {
         newCard,
         stage2,
         handleClickNewStage,
+        newTextArea,
+        handleTextAreaClick,
+        optionsCultura,
       }}
     >
       <Container>

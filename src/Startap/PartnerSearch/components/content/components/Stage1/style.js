@@ -4,6 +4,19 @@ import styled from 'styled-components';
 export const Container = styled.div`
     position: relative;
     left: 50px;
+    animation: fadeIn 0.5s;
+
+    @keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+`;
+
+export const TitleNewCard = styled.h2`
+    color: #000;
+    position: relative;
+    left: 30px;
+    top: 10px;
 `;
 
 export const TitleStage = styled.h3`
@@ -39,6 +52,21 @@ export const Checkbox = styled.input`
     left: 50px;
     bottom: 37px;
     display: inline-block;
+`;
+
+export const TextArea = styled.textarea`
+    position: relative;
+    left: 350px;
+    border-radius: 6px;
+    resize: none;
+    max-width: 200px;
+    max-height: 200px;
+    animation: fadeIn 0.5s;
+
+    @keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
 `;
 
 export const ButtonContentStage1 = styled.button`
@@ -85,8 +113,8 @@ animation: go-back 1s;
 
 export const ButtonStage2 = styled.button`
     border-color: #007fff;
-    position: relative;
-    top: 75px;
+    position: absolute;
+    top: 275px;
 	box-shadow: 0px 10px 14px -7px #007fff;
 	background-color:#007fff;
 	border-radius:8px;

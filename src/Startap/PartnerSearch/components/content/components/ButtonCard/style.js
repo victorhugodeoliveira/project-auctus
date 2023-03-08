@@ -55,10 +55,3 @@ export const ButtonNewCard = styled.button`
     box-shadow: 0px 10px 14px -7px #444;
 }
 `;
-
-export const TitleNewCard = styled.h2`
-    color: #000;
-    position: relative;
-    left: 30px;
-    top: 10px;
-`;

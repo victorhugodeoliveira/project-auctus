@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-  Container,
-  NewCardContainer,
-  ButtonNewCard,
-  TitleNewCard,
-} from './style';
+import { Container, NewCardContainer, ButtonNewCard } from './style';
 
 import { ContextCard } from '../../index';
 
@@ -21,7 +16,6 @@ const ButtonCard = () => {
       <ButtonNewCard onClick={handleClickNewCard}>Comece aqui</ButtonNewCard>
       {newCard && (
         <ContainerCard style={{ height: 450 }}>
-          <TitleNewCard>Procurando Novos Desafios</TitleNewCard>
           <Stage1></Stage1>
         </ContainerCard>
       )}
